@@ -4,6 +4,14 @@ body {
   font-style: normal;
   line-height: 1.5;
 }
+
+.marquee {
+  color: white;
+  font-size: 2rem;
+  backdrop-filter: blur(2px);
+  background-color: #ffffff11;
+  font-family: 'Courier New', Courier, monospace;
+}
 .mbr-section-title {
   font-style: normal;
   line-height: 1.2;
