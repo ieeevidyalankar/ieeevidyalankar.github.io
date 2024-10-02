@@ -1403,6 +1403,7 @@ body {
 .cid-qxtjPnYoS0 .navbar-dropdown.bg-color.transparent.opened {
   background: #333333;
 }
+
 .cid-qxtjPnYoS0 a {
   font-style: normal;
 }
@@ -4350,12 +4351,17 @@ body {
 }
 
 .cid-qxnCRh68sL H1 {
-  text-align: left;
-  color: #ffffff;
+  text-align: center;
+  color: #10689a;
+  text-shadow:
+                -2px -2px 0px white,
+                2px -2px 0px white,
+                -2px 2px 0px white,
+                2px 2px 0px white;
 }
 .cid-qxnCRh68sL .mbr-text,
 .cid-qxnCRh68sL .mbr-section-btn {
-  text-align: left;
+  text-align: center;
 }
 .cid-qxnCRh68sL .mbr-text,
 .cid-qxnCRh68sL .mbr-section-btn I {
@@ -8622,7 +8628,7 @@ body {
 }
 .cid-qFz9ILZDXo .navbar {
   padding: 0.5rem 0;
-  background: #00629B;
+  background: #00629b00;
   transition: none;
   min-height: px;
 }
@@ -8631,6 +8637,7 @@ body {
 }
 .cid-qFz9ILZDXo a {
   font-style: normal;
+  display: flex;
 }
 .cid-qFz9ILZDXo .nav-item span {
   padding-right: 0.4em;
@@ -8704,12 +8711,13 @@ body {
   padding-bottom: 0;
 }
 .cid-qFz9ILZDXo .dropdown .dropdown-menu {
-  background: #00629B;
+  background: #0d0f10b8;
   display: none;
   position: absolute;
   min-width: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-right: 12px;
   text-align: left;
   border-radius: 10px;
 }
@@ -8743,6 +8751,7 @@ body {
 .cid-qFz9ILZDXo .navbar.navbar-short {
   min-height: 60px;
   transition: all 0.2s;
+  background: #0d0f10b8;
 }
 .cid-qFz9ILZDXo .navbar.navbar-short .navbar-toggler-right {
   top: 20px;
@@ -9180,6 +9189,7 @@ body {
 .cid-qBgDU8PvJj .media-container-row .row-copirayt {
   word-break: break-word;
 }
+<<<<<<< HEAD
 
 
 /* NEW-FOOTER */
@@ -9341,3 +9351,54 @@ hr{
       flex-basis: 100%
   }
 }
+=======
+.about_ieee_section {
+  padding: 40px 0; /* Adjusts vertical padding of the section */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.about_ieee_row {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between cards */
+}
+
+.about_ieee_Card {
+  border-radius: 15px; /* Rounded corners */
+  background-color: #e4e6ec; /* White background */
+  overflow: hidden; /* Ensures border-radius works */
+  flex: 1; /* Equal space for cards */
+  margin: 10px; /* Spacing between cards */
+  height: 400px; /* Fixed card height */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+
+}
+
+.about_ieee_Card:hover {
+  background-color: #002855; /* Blue background */
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.4); /* Black shadow on left and bottom */
+  transform: translate(10px, -10px); /* Moves card slightly to the right and up */
+}
+
+.about_ieee_Card-body {
+  padding: 20px; /* Adjust padding */
+  text-align: center; /* Center text */
+  color: #000; /* Default text color */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.about_ieee_Card-title, .about_ieee_Card-text {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 1rem; 
+}
+
+.about_ieee_Card-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Change text color on hover */
+.about_ieee_Card:hover .about_ieee_Card-body {
+  color: #fff; /* White text on hover */
+}
+>>>>>>> 5d37e6989c7794a2435a0e8c103c0e6d06023aa6

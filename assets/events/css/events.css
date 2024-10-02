@@ -1,0 +1,244 @@
+#events .slider-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #events .slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  #events .cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    gap: 4px;
+  }
+  
+  #events .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    min-width: 25%; /* Ensure 4 cards are visible on large screens */
+    height: 30rem; 
+    background: transparent;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 3;
+    
+  }
+  
+  #events .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+    display: block;
+    transition: transform 0.5s;
+  }
+  
+  #events .card .overlay {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, #1c1c1c 50%);
+    border-radius: 0.25rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+    transition: height 0.5s;
+    z-index: 2;
+  }
+  
+  #events .card .overlay h3 {
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 90%; 
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.875rem;
+  }
+  
+  #events .card .overlay p {
+    color: #c2c2c2;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0.625rem;
+    padding-bottom: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+    white-space: normal;
+  }
+  
+  #events .card .overlay a {
+    margin-top: 0.625rem;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 0.25rem 0.5rem; /* Smaller button */
+    margin-bottom: 0.5rem; /* Added bottom margin */
+    display: inline-block; /* Fit content */
+  }
+  
+  #events .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  #events .card:hover .overlay {
+    height: 100%; /* Show overlay on hover */
+  }
+  
+  #events .nav-btn {
+    background: transparent;
+    border: 0.125rem solid white;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  #events .nav-btn:hover {
+    background: black;
+    color: #fff;
+    border-color: black;
+  }
+  
+  #events #prevBtn {
+    left: 0.625rem;
+  }
+  
+  #events #nextBtn {
+    right: 0.625rem;
+  }
+  
+  #events .section-title h2 {
+    font-weight: 500;
+    padding-left: 5rem;
+    line-height: 0.063rem;
+    margin: 0 0 0.313rem 0;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+ 
+  /* Responsive Styles */
+  
+  /* Tablet view */
+  @media (max-width: 64rem) {
+    #events .cards-wrapper {
+      justify-content: space-around;
+    }
+  
+    #events .card {
+      min-width: 45%; /* Show 2 cards at a time on tablet */
+      height: 27rem; /* Increased vertical size for tablet */
+    }
+  
+   
+  }
+  
+  /* Mobile view */
+  /* Mobile view */
+  @media (max-width: 48rem) {
+    #events .card .overlay h3 {
+      color: #ddd;
+      font-weight: 500;
+      margin-bottom: 0.125rem;
+      margin-top: 90%; /* Adjust margin */
+      font-family: "Open Sans", sans-serif;
+      font-size: 1rem;
+    }
+    
+    #events .card .overlay p {
+      color: #c2c2c2;
+      font-size: 0.625rem;
+      line-height: 1.5;
+      padding: 0.625rem;
+      padding-bottom: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      margin: 0;
+      white-space: normal;
+    }
+    
+    #events .card .overlay a {
+      margin-top: 0.625rem;
+      color: #262626;
+      text-decoration: none;
+      font-size: 0.625rem;
+      background: #fff;
+      border-radius: 0.25rem;
+      text-align: center;
+      padding: 0.25rem 0.5rem; /* Smaller button */
+      margin-bottom: 3.5rem; /* Added bottom margin */
+      display: inline-block; /* Fit content */
+    }
+    
+    #events{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #events .cards-wrapper {
+      justify-content: flex-start;
+      transition: transform 0.3s ease-in-out; /* Smooth transition */
+    }
+  
+    #events .card {
+      padding-top: 0;
+      min-width: 48%; /* Two cards side by side */
+      height: auto; /* Let the card adapt its height */
+      margin: 0 1%; /* Add a margin between cards */
+      overflow: hidden; /* Prevent content overflow */ /* Maintain shadow */
+    }
+  
+    #events .card img {
+      width: 100%;
+      height: 100%; /* Maintain aspect ratio */
+      border-radius: 0.25rem;
+      display: block;
+      transition: transform 0.5s;
+    }
+  
+    
+    #events .card:hover .overlay {
+      height: 100%; /* Set overlay height to 130% on hover */
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.9); /* Even stronger shadow on hover */
+    }
+  
+    #events .card .overlay h3,
+    #events .card .overlay p {
+      margin-bottom: 0; /* Ensure there's no margin cutting off text */
+    }
+  
+    
+  }
+  
