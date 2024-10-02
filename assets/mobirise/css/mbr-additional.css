@@ -9189,3 +9189,52 @@ body {
 .cid-qBgDU8PvJj .media-container-row .row-copirayt {
   word-break: break-word;
 }
+.about_ieee_section {
+  padding: 40px 0; /* Adjusts vertical padding of the section */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.about_ieee_row {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between cards */
+}
+
+.about_ieee_Card {
+  border-radius: 15px; /* Rounded corners */
+  background-color: #e4e6ec; /* White background */
+  overflow: hidden; /* Ensures border-radius works */
+  flex: 1; /* Equal space for cards */
+  margin: 10px; /* Spacing between cards */
+  height: 400px; /* Fixed card height */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+
+}
+
+.about_ieee_Card:hover {
+  background-color: #002855; /* Blue background */
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.4); /* Black shadow on left and bottom */
+  transform: translate(10px, -10px); /* Moves card slightly to the right and up */
+}
+
+.about_ieee_Card-body {
+  padding: 20px; /* Adjust padding */
+  text-align: center; /* Center text */
+  color: #000; /* Default text color */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.about_ieee_Card-title, .about_ieee_Card-text {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 1rem; 
+}
+
+.about_ieee_Card-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Change text color on hover */
+.about_ieee_Card:hover .about_ieee_Card-body {
+  color: #fff; /* White text on hover */
+}
