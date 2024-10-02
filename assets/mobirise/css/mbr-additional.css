@@ -9293,10 +9293,10 @@ form input{
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-a {
+.social-icons-footer-24 a{
   transition: all 0.3s linear;
 }
-a:hover{
+.social-icons-footer-24 a:hover{
   transform: scale(1.4);
 }
 .social-icons-footer-24 .fab:hover{
