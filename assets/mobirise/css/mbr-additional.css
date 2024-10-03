@@ -4433,7 +4433,7 @@ body {
 }
 .cid-qBg8uLV84C {
   padding-top: 30px;
-  padding-bottom: 30%;
+  padding-bottom: 50px;
   background-color: #f9f9f9;
 }
 .cid-qBg8uLV84C .mbr-section-subtitle {
@@ -9189,7 +9189,7 @@ body {
 .cid-qBgDU8PvJj .media-container-row .row-copirayt {
   word-break: break-word;
 }
-<<<<<<< HEAD
+
 
 
 /* NEW-FOOTER */
@@ -9207,7 +9207,7 @@ body{
 }
 footer{
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   /* background: linear-gradient(to right, #0018a8, #2d0b00); */
   background-color:#002855;
@@ -9241,7 +9241,7 @@ footer{
   
 }
 .logo-footer-24{
-  width: 170px;
+  width: 200px;
   margin-bottom: 30px;
 }
 .col-footer-24 h3{
@@ -9351,7 +9351,6 @@ hr{
       flex-basis: 100%
   }
 }
-=======
 .about_ieee_section {
   padding: 40px 0; /* Adjusts vertical padding of the section */
   background-color: #f8f9fa; /* Light background color */
@@ -9401,4 +9400,3 @@ hr{
 .about_ieee_Card:hover .about_ieee_Card-body {
   color: #fff; /* White text on hover */
 }
->>>>>>> 5d37e6989c7794a2435a0e8c103c0e6d06023aa6

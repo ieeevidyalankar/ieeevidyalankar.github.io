@@ -4,6 +4,7 @@ const nextBtn = document.getElementById('nextBtn');
 
 let currentSlide = 0;
 let visibleCards = calculateVisibleCards(); // Dynamically calculate visible cards
+let totalSlides = document.querySelectorAll('.card').length; // Total number of slides (cards)
 
 // Function to calculate the number of visible cards based on screen width
 function calculateVisibleCards() {
@@ -17,44 +18,40 @@ function calculateVisibleCards() {
   }
 }
 
-// Update the state of the navigation buttons (Always enabled for infinite loop)
-function updateNavButtons() {
-  prevBtn.disabled = false;
-  nextBtn.disabled = false;
-}
-
 // Move the slider left or right
 function moveSlider() {
   const cardWidth = document.querySelector('.card').offsetWidth + parseFloat(getComputedStyle(document.querySelector('.card')).marginRight); // Card width + margin
-  cardsWrapper.style.transform = `translateX(-${currentSlide * cardWidth}px)`; // Correct transform syntax
-  updateNavButtons();
+  const maxSlide = totalSlides - visibleCards;
+  
+  // Correct transform to always move in the proper direction
+  if (currentSlide > maxSlide) {
+    currentSlide = 0; // Reset to the first card
+  } else if (currentSlide < 0) {
+    currentSlide = maxSlide; // Go to the last set of visible cards
+  }
+  
+  const translateValue = -(currentSlide * cardWidth);
+  cardsWrapper.style.transform = `translateX(${translateValue}px)`; // Apply translation
 }
 
 // Previous button functionality
 prevBtn.addEventListener('click', () => {
   currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = totalSlides - visibleCards; // Loop back to the last set of slides
-  }
   moveSlider();
 });
 
 // Next button functionality
 nextBtn.addEventListener('click', () => {
   currentSlide++;
-  if (currentSlide >= totalSlides - visibleCards) {
-    currentSlide = 0; // Loop back to the first card
-  }
   moveSlider();
 });
 
-// Recalculate visible cards and move slider when window resizes
+// Recalculate visible cards and total slides when window resizes
 window.addEventListener('resize', () => {
   visibleCards = calculateVisibleCards(); // Recalculate visible cards on resize
+  totalSlides = document.querySelectorAll('.card').length; // Update total slides count
   moveSlider(); // Adjust slider position
 });
 
-// Initialize slider position and button states
-const totalSlides = document.querySelectorAll('.card').length; // Dynamic calculation of totalSlides
+// Initialize slider
 moveSlider();
-updateNavButtons();
