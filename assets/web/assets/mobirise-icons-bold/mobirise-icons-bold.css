@@ -273,9 +273,9 @@
 .mbrib-music:before {
   content: "\e952";
 }
-.mbrib-new-file:before {
+/* .mbrib-new-file:before {
   content: "\e953";
-}
+} */
 .mbrib-numbered-list:before {
   content: "\e954";
 }

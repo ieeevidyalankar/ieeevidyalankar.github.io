@@ -108,9 +108,9 @@
 .mbri-cloud:before {
   content: "\e91b";
 }
-.mbri-code:before {
+/* .mbri-code:before {
   content: "\e91c";
-}
+} */
 .mbri-contact-form:before {
   content: "\e91d";
 }
@@ -207,9 +207,9 @@
 .mbri-image-slider:before {
   content: "\e93c";
 }
-.mbri-info:before {
+/* .mbri-info:before {
   content: "\e93d";
-}
+} */
 .mbri-italic:before {
   content: "\e93e";
 }
@@ -273,9 +273,9 @@
 .mbri-music:before {
   content: "\e952";
 }
-.mbri-new-file:before {
+/* .mbri-new-file:before {
   content: "\e953";
-}
+} */
 .mbri-numbered-list:before {
   content: "\e954";
 }
@@ -306,9 +306,9 @@
 .mbri-plus:before {
   content: "\e95d";
 }
-.mbri-preview:before {
+/* .mbri-preview:before {
   content: "\e95e";
-}
+} */
 .mbri-print:before {
   content: "\e95f";
 }
@@ -333,9 +333,9 @@
 .mbri-right:before {
   content: "\e966";
 }
-.mbri-rocket:before {
+/* .mbri-rocket:before {
   content: "\e967";
-}
+} */
 .mbri-sad-face:before {
   content: "\e968";
 }
@@ -444,9 +444,9 @@
 .mbri-user2:before {
   content: "\e98b";
 }
-.mbri-users:before {
+/* .mbri-users:before {
   content: "\e98c";
-}
+} */
 .mbri-video:before {
   content: "\e98d";
 }
