@@ -39,4 +39,24 @@ $(window).load(function(){
 
   init();
 
+  // Select all 'See More' buttons
+var seeMoreButtons = document.querySelectorAll('.see-more');
+
+seeMoreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Get the parent event card
+    const card = button.closest('.event-card');
+    
+    // Toggle the 'expanded' class only for the clicked event card
+    card.classList.toggle('expanded');
+    
+    // Update the button text based on expansion state
+    if (card.classList.contains('expanded')) {
+      button.textContent = 'See Less';
+    } else {
+      button.textContent = 'See More';
+    }
+  });
+});
+
 });
