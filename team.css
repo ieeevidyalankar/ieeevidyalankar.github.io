@@ -1,0 +1,299 @@
+body{margin-top:20px;
+background:#eee;
+}
+.single_advisor_profile {
+    position: relative;
+    margin-bottom: 50px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    z-index: 1;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+}
+.single_advisor_profile .advisor_thumb {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+    padding: 15px 15px 0 15px;
+    background-color: #3f43fd;
+    overflow: hidden;
+}
+.single_advisor_profile .advisor_thumb::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    width: 150%;
+    height: 80px;
+    bottom: -45px;
+    left: -25%;
+    content: "";
+    background-color: #ffffff;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+@media only screen and (max-width: 575px) {
+    .single_advisor_profile .advisor_thumb::after {
+        height: 160px;
+        bottom: -90px;
+    }
+}
+.single_advisor_profile .advisor_thumb .social-info {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    right: 30px;
+    text-align: right;
+}
+.single_advisor_profile .advisor_thumb .social-info a {
+    font-size: 14px;
+    color: #020710;
+    padding: 0 5px;
+}
+.single_advisor_profile .advisor_thumb .social-info a:hover,
+.single_advisor_profile .advisor_thumb .social-info a:focus {
+    color: #3f43fd;
+}
+.single_advisor_profile .advisor_thumb .social-info a:last-child {
+    padding-right: 0;
+}
+.single_advisor_profile .single_advisor_details_info {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    text-align: right;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    border-radius: 0 0 15px 15px;
+    background-color: #ffffff;
+}
+.single_advisor_profile .single_advisor_details_info::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 3px;
+    background-color: #3f43fd;
+    content: "";
+    top: 12px;
+    right: 30px;
+}
+.single_advisor_profile .single_advisor_details_info h6 {
+    margin-bottom: 0.25rem;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single_advisor_profile .single_advisor_details_info h6 {
+        font-size: 14px;
+    }
+}
+.single_advisor_profile .single_advisor_details_info p {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single_advisor_profile .single_advisor_details_info p {
+        font-size: 12px;
+    }
+}
+.single_advisor_profile:hover .advisor_thumb::after,
+.single_advisor_profile:focus .advisor_thumb::after {
+    background-color: #070a57;
+}
+.single_advisor_profile:hover .advisor_thumb .social-info a,
+.single_advisor_profile:focus .advisor_thumb .social-info a {
+    color: #ffffff;
+}
+.single_advisor_profile:hover .advisor_thumb .social-info a:hover,
+.single_advisor_profile:hover .advisor_thumb .social-info a:focus,
+.single_advisor_profile:focus .advisor_thumb .social-info a:hover,
+.single_advisor_profile:focus .advisor_thumb .social-info a:focus {
+    color: #ffffff;
+}
+.single_advisor_profile:hover .single_advisor_details_info,
+.single_advisor_profile:focus .single_advisor_details_info {
+    background-color: #070a57;
+}
+.single_advisor_profile:hover .single_advisor_details_info::after,
+.single_advisor_profile:focus .single_advisor_details_info::after {
+    background-color: #ffffff;
+}
+.single_advisor_profile:hover .single_advisor_details_info h6,
+.single_advisor_profile:focus .single_advisor_details_info h6 {
+    color: #ffffff;
+}
+.single_advisor_profile:hover .single_advisor_details_info p,
+.single_advisor_profile:focus .single_advisor_details_info p {
+    color: #ffffff;
+}
+.container {
+    max-width: 1200px; /* Adjust according to your layout */
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.headcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.team-member {
+    flex: 0 1 30%; /* Adjust the width as necessary */
+    margin: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Reduced shadow width */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Spacing between team members */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.team-image {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for image zoom */
+}
+
+.team-image:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.name-social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between image and names */
+    width: 100%; /* Ensure it doesn't go outside image size */
+}
+
+.name-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px; /* Space between names */
+}
+
+.name {
+    font-size: 14px; /* Smaller font size */
+    margin: 5px 0; /* Space between name and icons */
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between social icons */
+}
+
+.social-icon {
+    font-size: 16px; /* Size of social icons */
+    color: #fff; /* Adjust icon color as needed */
+}
+
+
+
+   /* Changes by Roshan */
+.card {
+    position: relative;
+    width: 290px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+    transition: 0.2s;
+    padding: 30px 10px 20px 10px; 
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+    backdrop-filter: blur(7px);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 60px;
+  }
+
+  .card:hover {
+    height: 350px;
+    box-shadow: 0px 5px 20px rgb(1, 60, 255);
+  
+  }
+
+  .card:hover .content {
+    opacity: 1; /* Show content on hover */
+    transform: translateY(30px); /* Lift effect */
+  }
+
+  .para{
+    transform: translateY(-4px);
+    opacity: 1;
+    transition: 0.1s;
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+
+.card:hover .imgbox .para {
+    opacity: 0; /* Show content on hover */
+    transform: translateY(-10px); /* Lift effect */
+  }
+ 
+  .imgbox {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    transform: translateY(-80px);
+    z-index: 9;
+    border-radius: 10px;
+    
+  }
+
+  
+
+  .content {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    background-color: #282c34;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(1, 60, 255);
+
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    
+  }
+
+  object{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);    
+  }
+
+  h1{
+    padding-left: 20px;
+  }
+
