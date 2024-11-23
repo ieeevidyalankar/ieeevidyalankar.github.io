@@ -82,7 +82,7 @@
 
 
 
-.dot {
+.dots {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -92,7 +92,7 @@
     cursor: pointer;
 }
 
-.dot.active {
+.dots.active {
     background: #981D97;
 }
 
@@ -151,7 +151,7 @@
         align-items: center;
         gap: 10px; /* Space between dots */
     }
-    .dot {
+    .dots {
         width: 10px;
         height: 10px;
     }
@@ -185,7 +185,7 @@
         align-items: center;
         gap: 10px; /* Space between dots */
     }
-    .dot {
+    .dots {
         width: 8px;
         height: 8px;
     }

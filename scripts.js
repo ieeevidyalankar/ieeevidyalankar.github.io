@@ -84,7 +84,7 @@ const profileImage = document.getElementById("profile-image");
 const nameElement = document.getElementById("name");
 const roleElement = document.getElementById("role");
 const quoteElement = document.getElementById("quote");
-const dots = document.querySelectorAll('.dot');
+const dot = document.querySelectorAll('.dot');
 
 // Function to update the testimonial
 function updateTestimonial(index) {
@@ -95,14 +95,14 @@ function updateTestimonial(index) {
   quoteElement.textContent = testimonials[index].quote;
 
   // Update active dot
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
+  dot.forEach(dotes => dotes.classList.remove('active'));
+  dot[index].classList.add('active');
 }
 
 // Add click event to dots
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-      const index = parseInt(dot.getAttribute('data-index'));
+dot.forEach(dotes => {
+  dotes.addEventListener('click', () => {
+      const index = parseInt(dotes.getAttribute('data-index'));
       updateTestimonial(index);
   });
 });
