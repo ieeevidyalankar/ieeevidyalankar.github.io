@@ -1,54 +1,87 @@
+/* Section styling */
 #nav-events {
     text-align: center;
-}
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #e4e6ec;
 
-.nav-container {
+}
+/* 
+.nav-container:active {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: black;
-    color: white;
-}
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+} */
 
+/* Navbar */
 .nav-container > nav {
     display: flex;
-    flex-direction: row;
-    margin-right: 50px;
-    justify-content: space-around;
+    justify-content: center;
     cursor: pointer;
+
+}
+
+.nav-container > nav:hover {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+
 }
 
 .nav-container > nav a {
-    border-right: solid 2px gray;
-    font-size: 3rem;
-    padding-inline: 70px;
-    color: white; /* Added color to the links */
+    font-size: 2rem;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    /* transition: background-color 0.3s ease, color 0.3s ease;  Smooth transition */
 }
 
+/* Apply hover effect properly */
 .nav-container > nav a:hover {
-    background-color: #00629B;
+    background-color: #002f64; /* Blue background */
+    color: white;
+    
 }
 
+/* Apply the active state only for clicking and maintain hover styling */
+.nav-container > nav a:active {
+    background-color: #002855; /* Slightly darker blue on click */
+    color: white;
+    
+}
+
+/* Ensure no overriding on hover */
+.nav-container > nav a:hover:active {
+    background-color: #002f64; /* Blue background on click while hovering */
+    color: white;
+
+}
+
+
+/* Panel styling */
 main {
     width: 100%;
 }
 
 .panel {
     display: none;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .panel.active {
     display: block;
 }
 
-/* Carousel CSS */
+/* Carousel styling */
 .carousel-container {
     position: relative;
     max-width: 100%;
     margin: auto;
-    background-color: #111;
-    padding: 20px;
+    background-color: #e4e6ec;
+    /* padding: 20px; */
     border-radius: 10px;
 }
 
@@ -59,8 +92,8 @@ main {
 
 .slide {
     min-width: 100%;
-    transition: transform 0.5s ease-in-out;
-    color: white;
+    transition: transform 0.2s ease-in-out;
+    color: rgb(255, 255, 255);
     text-align: center;
     display: none;
 }
@@ -77,21 +110,18 @@ main {
     padding: 16px;
     color: white;
     font-weight: bold;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.5); /* Added background for visibility */
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 5px;
+    transform: translateY(-50%);
 }
 
 .prev {
     left: 10px;
-    transform: translateY(-50%);
 }
 
 .next {
     right: 10px;
-    transform: translateY(-50%);
 }
 
 .dots-container {
@@ -110,70 +140,180 @@ main {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot.active, .dot:hover {
     background-color: #717171;
 }
+
+/* Responsive adjustments without stacking the navbar */
 @media (max-width: 768px) {
-.nav-container > nav {
-flex-direction: column; /* Stack links vertically */
-margin-right: 0; /* Remove right margin */
+    /* Adjusting padding and font size for smaller screens while keeping horizontal layout */
+    .nav-container > nav a {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+
+    .panel h2 {
+        font-size: 1.5rem;
+    }
+
+    .panel p {
+        font-size: 1rem;
+    }
+
+    .prev, .next {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    .carousel-container {
+        padding: 10px;
+    }
 }
 
-.nav-container > nav a {
-border-right: none; /* Remove border for mobile view */
-padding-inline: 0; /* Remove padding for mobile view */
-margin: 10px 0; /* Add margin between links */
-font-size: 2rem; /* Adjust font size */
-}
-
-.panel h2 {
-font-size: 1.5rem; /* Smaller heading font size */
-}
-
-.panel p {
-font-size: 1rem; /* Smaller paragraph font size */
-}
-
-.prev, .next {
-padding: 12px; /* Adjust button padding for mobile */
-font-size: 1rem; /* Adjust button font size for mobile */
-}
-
-.dot {
-height: 10px; /* Smaller dot size */
-width: 10px; /* Smaller dot size */
-}
-
-/* Adjust the carousel container */
-.carousel-container {
-padding: 10px; /* Less padding for mobile */
-}
-}
-
-.event-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    height: 400px; 
-    padding: 10px;
-}
-.event-img{
-    width: 100%;
-    height: 100%;
-}
-.event-details{
+/* Event container styling */
+.event-container {
     display: flex;
-    flex-flow: column wrap;
+    /* flex-wrap: wrap; */
+    max-width: 1200px; /* Limit max width to prevent excessive stretching on large screens */
+    margin: 0 auto; /* Center the grid */
+    /* gap: 20px; Space between image and details */
+   
+  
+
 }
-.slide a{
-    margin-top: 0.625rem;
-    color: #262626;
-    text-decoration: none;
-    font-size: 14px;
-    background: #fff;
-    border-radius: 0.25rem;
+
+.event-img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%; /* Maintain a 4:3 aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out; 
+
+  
+}
+
+.event-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;/* should be 50%*/
+    width: 100%;
+    /* height: 100%; /* Stretch image to fill the height remove if not worked*/  
+    object-fit: contain; 
+    transform: translate(-50%, -50%); /*Center the image */
+
+
+
+
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically align the content */
+    color: black;
+    flex: 1; /* Make the details take up remaining space */
+}
+
+.event-details .detail {
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
     text-align: center;
-    padding: 0.25rem 0.5rem; /* Smaller button */
-    margin-bottom: 0.5rem; /* Added bottom margin */
-    display: inline-block; /* Fit content */
+    transition: transform 0.3s, color 0.3s;
 }
+
+/* Ensure images are responsive on larger screens */
+@media (min-width: 768px) {
+    .event-img {
+        padding-bottom: 50.67%; /* 3:2 Aspect Ratio for larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .event-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger minimum width */
+    }
+}
+/* Style for the anchor link */
+nav a.nav-linked{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure the link takes up space */
+   
+}
+
+/* Style for the text inside the anchor tag */
+nav a.nav-linked .event-text {
+    font-weight: bold;
+    color: rgb(0, 0, 0);  /* Default text color */
+    transition: color 0.3s ease; /* Transition for text color */
+    font-size: larger;
+ 
+    border-right: 2px solid #002f64 ;  /* Add a right border */
+    padding-right: 5px;  /* Optional: Add some space between text and border */
+    
+
+    
+}
+
+
+
+
+
+/* Hover effect on the anchor */
+nav a.nav-linked:hover {
+    background-color: #002f64;  /* Change background on hover */
+   
+}
+
+/* Hover effect on the text inside the anchor */
+nav a.nav-linked:hover .event-text {
+    color: white;  /* Change text color when hover on anchor */
+}
+
+/* Active class to keep hover effect when clicked */
+nav a.nav-linked.active {
+    background-color: #002f64; /* Keep background color after click */
+}
+
+nav a.nav-linked.active .event-text {
+    color: white; /* Keep text color as white when active */
+}
+
+/* Focus and active states */
+nav a.nav-linked:focus .event-text,
+nav a.nav-linked:active .event-text {
+    color: white; /* Keep text color as white on focus or active */
+}
+
+
+
+
+  .unique-class {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Ensure space distribution between items */
+    align-items: center; /* Align items vertically */
+   
+    margin: 10px;
+    box-sizing: border-box; /* Include padding and border in width calculations */
+    color: black;
+
+    gap: 10px; /* Add spacing between child elements */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+
+
+
+
+
+
