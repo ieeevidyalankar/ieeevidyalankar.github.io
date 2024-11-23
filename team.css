@@ -16,7 +16,7 @@ background:#eee;
     z-index: 1;
     border-radius: 15px 15px 0 0;
     margin: 0 auto;
-    padding: 30px 30px 0 30px;
+    padding: 15px 15px 0 15px;
     background-color: #3f43fd;
     overflow: hidden;
 }
@@ -215,7 +215,7 @@ background:#eee;
 .card {
     position: relative;
     width: 290px;
-    height: 290px;
+    height: 300px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgb(0, 0, 0);
     transition: 0.2s;
