@@ -1,0 +1,192 @@
+.faculty {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #fff;
+}
+
+.testimonial-container {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    max-width: 90%;
+    background-color: #e4e6ec;
+    color: black;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.testimonial-container:hover {
+    background-color: #002855; /* New background color on hover */
+    box-shadow: black;
+    color: white;
+    transform: translateY(-10px);
+}
+
+.testimonial-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #e4e6ec;
+    /*background: rgba(0, 0, 0, 0.6);  Transparent overlay */
+    z-index: 1;
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-image {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 3px solid white;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.testimonial-role {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    
+}
+
+.testimonial-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: gray;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #981D97;
+}
+
+.grid-faculty{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+.testimonial-navigation {
+    margin-top: 0; /* Remove top margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    gap: 10px; /* Space between dots */
+    position: absolute; /* Position relative to the container */
+    bottom: 20px; /* Position dots near the bottom */
+    width: 100%; /* Ensure it spans across the width */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .testimonial-container {
+
+        padding: 1rem; /* Adjust padding for better spacing */
+    }
+
+    .grid-faculty{
+        display: block;
+    }
+
+    .testimonial-image {
+        width: 12rem;
+        height: 12rem;
+        
+    }
+
+    .testimonial-name {
+        font-size: 1rem;
+    }
+
+    .testimonial-role {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 0.9rem;
+    }
+    .testimonial-navigation {
+        position: static; /* Removes absolute positioning */
+        margin-top: 1rem; /* Add spacing above dots */
+        display: flex;
+        justify-content: center; /* Center the dots */
+        align-items: center;
+        gap: 10px; /* Space between dots */
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+    .testimonial-container {
+        padding: 1rem;
+        width: 90%;
+        height: 60vh;
+    }
+
+    .testimonial-name {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-role {
+        font-size: 1rem;
+    }
+
+    .testimonial-quote {
+        font-size: 0.9rem;
+        margin-bottom: 55px;
+    }
+    .testimonial-navigation {
+        position: static; /* Removes absolute positioning */
+        margin-top: 0.8rem; /* Add spacing above dots */
+        display: flex;
+        justify-content: center; /* Center the dots */
+        align-items: center;
+        gap: 10px; /* Space between dots */
+    }
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
