@@ -9570,4 +9570,26 @@ body {
     height: 30px;
     font-size: 20px; /* Smaller arrows on mobile */
   }
+
+  #Upcoming_Events {
+    padding-bottom: 40px;
+  }
+
+  .mbr-fullscreen {
+    min-height: 0vh;
+  }
+
+  .cid-qxnCRh68sL {
+    height: 35vh;
+  } 
+
+  .mbr-white {
+    margin-top: 140px;
+  }
+
+  .mbr-text {
+    padding-bottom: 4px;
+  }
+
+  
 }
