@@ -9400,3 +9400,196 @@ hr{
 .about_ieee_Card:hover .about_ieee_Card-body {
   color: #fff; /* White text on hover */
 }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: black;
+  text-align: center;
+}
+
+.nav-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-tabs li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-tabs li a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.carousel-section {
+  display: none;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.carousel-section.active {
+  display: block;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: #717171;
+}
+
+/* Slider Styles */
+#custom-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width for larger screens */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for a polished look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add some depth with shadow */
+}
+
+.custom-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.custom-slide {
+  flex-shrink: 0;
+  width: 100%; /* Each slide takes up the full width of the container */
+  position: relative;
+}
+
+.custom-slide img {
+  width: 100%;
+  height: auto; /* Maintain image's aspect ratio */
+  object-fit: cover; /* Ensure the image covers the slide without stretching */
+  border-radius: 10px; /* Match the container's rounded corners */
+}
+
+/* Arrow buttons */
+.custom-prev, .custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-prev:hover, .custom-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.custom-prev:active, .custom-next:active {
+  transform: scale(0.95); /* Shrink on click */
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .custom-slide {
+    height: auto; /* Let height adjust to the image's size */
+  }
+
+  .custom-prev, .custom-next {
+    width: 30px;
+    height: 30px;
+    font-size: 20px; /* Smaller arrows on mobile */
+  }
+
+  #Upcoming_Events {
+    padding-bottom: 40px;
+  }
+
+  .mbr-fullscreen {
+    min-height: 0vh;
+  }
+
+  .cid-qxnCRh68sL {
+    height: 35vh;
+  } 
+
+  .mbr-white {
+    margin-top: 140px;
+  }
+
+  .mbr-text {
+    padding-bottom: 4px;
+  }
+
+  
+}

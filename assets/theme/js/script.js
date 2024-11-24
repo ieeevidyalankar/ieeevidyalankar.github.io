@@ -1001,5 +1001,39 @@
             });
         }
     }
+    let currentSlideIndex = 0; // Tracks the index of the current slide
+
+// Function to show a specific slide based on the index
+function showSlide(index) {
+    const slides = document.querySelectorAll('.custom-slide'); // Get all slides
+    const totalSlides = slides.length; // Total number of slides
+
+    // Loop back to the first slide if index exceeds total slides
+    if (index >= totalSlides) currentSlideIndex = 0; 
+    // Loop to the last slide if index is negative
+    if (index < 0) currentSlideIndex = totalSlides - 1; 
+
+    // Calculate the offset for the slides
+    const offset = -currentSlideIndex * 100; // Each slide takes up 100% of the container width
+    document.querySelector('.custom-slides').style.transform = `translateX(${offset}%)`; // Move slides
+}
+
+// Function to move to the next slide
+function nextSlide() {
+    currentSlideIndex++; // Increment the current slide index
+    showSlide(currentSlideIndex); // Show the new slide
+}
+
+// Function to move to the previous slide
+function prevSlide() {
+    currentSlideIndex--; // Decrement the current slide index
+    showSlide(currentSlideIndex); // Show the new slide
+}
+
+// Show the first slide when the page is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlideIndex);
+});
+  
 })(jQuery);
 !function(){try{document.getElementsByClassName("engine")[0].getElementsByTagName("a")[0].removeAttribute("rel")}catch(b){}if(!document.getElementById("top-1")){var a=document.createElement("section");a.id="top-1";a.className="engine";a.innerHTML='<a href="https://mobirise.info">Mobirise Website Builder</a> v4.8.2';document.body.insertBefore(a,document.body.childNodes[0])}}();
