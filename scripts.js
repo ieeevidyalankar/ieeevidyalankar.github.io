@@ -60,3 +60,49 @@ seeMoreButtons.forEach(button => {
 });
 
 });
+
+
+//Java Script-
+const testimonials = [
+  {
+      name: "Prof. Pranita Padhye",
+      role: "IEEE-VIT CONVENER",
+      quote: "Mrs. Pranita Padhye is the convenor fo the IEEE-VIT Student Branch. Her career reflects her dedication to inspiring and educating young minds. Starting with an Engineering degree in Electronics and Telecommunication, her passion led her to teach at Vidyalankar Institute of Technology, where she earned her master’s from NMU Jalgaon.", 
+      image: "./assets/images/convenor.png"
+  },
+  {
+      name: "Dr. Pratik Mhatre",
+      role: "IEEE-VIT AMBASSADOR",
+      quote: "Dr. Prateek Mhatre is an accomplished engineer with a passion for applying theoretical concepts to benefit humanity. Specializing in Electronics and Telecommunication, he developed a keen interest in RF, Microwave, and Antenna technologies during his academic journey. ",
+      image:  "./assets/images/ambassador.png"
+  },
+  
+];
+
+// Elements
+const profileImage = document.getElementById("profile-image");
+const nameElement = document.getElementById("name");
+const roleElement = document.getElementById("role");
+const quoteElement = document.getElementById("quote");
+const dot = document.querySelectorAll('.dot');
+
+// Function to update the testimonial
+function updateTestimonial(index) {
+  // Update content
+  profileImage.src = testimonials[index].image;
+  nameElement.textContent = testimonials[index].name;
+  roleElement.textContent = testimonials[index].role;
+  quoteElement.textContent = testimonials[index].quote;
+
+  // Update active dot
+  dot.forEach(dotes => dotes.classList.remove('active'));
+  dot[index].classList.add('active');
+}
+
+// Add click event to dots
+dot.forEach(dotes => {
+  dotes.addEventListener('click', () => {
+      const index = parseInt(dotes.getAttribute('data-index'));
+      updateTestimonial(index);
+  });
+});
