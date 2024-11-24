@@ -9591,5 +9591,8 @@ body {
     padding-bottom: 4px;
   }
 
+  .navbar-collapse {
+    background-color: #0d0f10b8;
+  }
   
 }
