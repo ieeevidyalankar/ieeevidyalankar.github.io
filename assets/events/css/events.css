@@ -33,6 +33,11 @@
     padding: 3;
     
   }
+  #events .card.web3{
+    min-width: 45%;
+    
+  }
+
   
   #events .card img {
     width: 100%;
@@ -103,6 +108,10 @@
   #events .card:hover .overlay {
     height: 100%; /* Show overlay on hover */
   }
+  #events .card:hover .overlay.web3ov{
+    height: 140%; /* Set overlay height to 130% on hover */
+    
+  }
   
   #events .nav-btn {
     background: transparent;
@@ -154,6 +163,10 @@
   
   /* Tablet view */
   @media (max-width: 64rem) {
+    #events .card:hover .overlay.web3ov{
+      height: 120%; /* Set overlay height to 130% on hover */
+      
+    }
     #events .cards-wrapper {
       justify-content: space-around;
     }
@@ -162,13 +175,20 @@
       min-width: 45%; /* Show 2 cards at a time on tablet */
       height: 27rem; /* Increased vertical size for tablet */
     }
-  
+    #events .card.web3{
+      min-width: 50%; /* Show 2 cards at a time on tablet */
+    }
+    
    
   }
   
   /* Mobile view */
   /* Mobile view */
   @media (max-width: 48rem) {
+    #events .card:hover .overlay.web3ov{
+      height: 100%; /* Set overlay height to 130% on hover */
+      
+    }
     #events .card .overlay h3 {
       color: #ddd;
       font-weight: 500;
@@ -218,6 +238,10 @@
       height: auto; /* Let the card adapt its height */
       margin: 0 1%; /* Add a margin between cards */
       overflow: hidden; /* Prevent content overflow */ /* Maintain shadow */
+    }
+    #events .card.web3{
+      min-width: 80%;
+      
     }
   
     /* #events .card img {
